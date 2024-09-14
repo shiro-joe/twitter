@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+{% block title %}Sign-up 画面{% endblock %}
+{% block content %}
+<div class="m-auto w-75 px-5 py-3 border rounded">
+  <form method="post" action="/sign-up">
+    <label for="userName" class="form-label">ユーザーネーム</label>
+    <input id="userName" name="userName" type="text" class="form-control mb-2" value="">
+    <label for="password" class="form-label">パスワード</label>
+    <input id="password" name="password" type="password" class="form-control mb-2">
+    <label for="passwordAgain" class="form-label">パスワード（再確認）</label>
+    <input id="passwordAgain" name="passwordAgain" type="password" class="form-control mb-4">
+    <div class="mt-1 mb-2 text-center">
+      <input type="submit" class="btn btn-outline-primary" value="サインアップ">
+    </div>
+  </form>
+</div>
+<div class="text-center my-5">
+  <a class="btn btn-outline-primary" href="/sign-in">サインイン</a>
+</div>
+{% endblock %}
